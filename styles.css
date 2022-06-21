@@ -1,8 +1,22 @@
+h1 {
+  text-align: center;
+}
+
+button {
+  width: 10%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
 .gridBoard {
   width: 500px;
   height: 500px;
   display: grid;
   margin: auto;
+  border: black;
+  border-style: solid;
 }
 
 .slidecontainer {

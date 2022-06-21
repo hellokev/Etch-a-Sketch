@@ -1,10 +1,9 @@
 const board = document.querySelector('.gridBoard');
-const reset = document.querySelector('.reset');
+const reset = document.getElementById('resetButton');
 const rand = document.querySelector('button');
+let val = document.querySelector('.slider').value;
 let colorInput = document.querySelector('#colorPicker');
 let color;
-
-
 
 function createGrid(sizeGrid) {
     board.style.gridTemplateColumns = `repeat(${sizeGrid}, 1fr)`;
@@ -15,7 +14,8 @@ function createGrid(sizeGrid) {
         cells.style.backgroundColor = 'white';
         board.appendChild(cells);
         rand.addEventListener("click", () => randomColors(cells));
-        colorInput.addEventListener("click", ()=> colorGrid(cells)); //only doing things to cell
+        colorInput.addEventListener("click", ()=> colorGrid(cells));
+        reset.addEventListener("click", ()=> resetGrid(cells));
     }
 }
 
@@ -35,10 +35,8 @@ function randomColors(cells) {
     })
 }
 
-
-
-function resetGrid() {
-    
+function resetGrid(cells) {
+    cells.style.backgroundColor = "white";
 }
 
 
@@ -46,5 +44,5 @@ function changeSize(input) {
     createGrid(input);
 }
 
-createGrid(16);
+createGrid(val);
 
