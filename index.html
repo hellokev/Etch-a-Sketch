@@ -11,12 +11,14 @@
     <h1>Etch-a-Sketch</h1>
     <div class="container">
         <div class="gridBoard"></div>
-        <div class="slidecontainer">
-            <input type="range" min="16" max="64" value="16" class="slider" onchange="changeSize(this.value)" id="myRange">
+        <div class="main-container">
+            <div class="slide-container">
+                <input type="range" min="16" max="64" value="16" class="slider" onchange="changeSize(this.value)" id="myRange">
+            </div>
+            <input type="color" id="colorPicker" value="#000000">
+            <button>Random</button>
+            <button id="resetButton">Reset</button>
         </div>
-        <input type="color" id="colorPicker" value="#000000">
-        <button>Random</button>
-        <button id="resetButton">Reset</button>
 
     </div>
 </body>

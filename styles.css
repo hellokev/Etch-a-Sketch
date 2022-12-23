@@ -19,7 +19,7 @@ button {
   border-style: solid;
 }
 
-.slidecontainer {
+.slide-container {
   width: 10%; /* Width of the outside container */
 }
 
@@ -55,4 +55,13 @@ button {
 
 #colorPicker {
   width: 10%;
+}
+
+.main-container {
+  padding-top: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
 }
